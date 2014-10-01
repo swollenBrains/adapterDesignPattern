@@ -1,0 +1,15 @@
+package com.ankitgupta.designPatterns.adapter.main;
+
+import com.ankitgupta.designPatterns.adapter.charger.Charger;
+import com.ankitgupta.designPatterns.adapter.charger.TwoPinChargeAdapter;
+import com.ankitgupta.designPatterns.adapter.charger.TwoPinCharger;
+
+public class ChargingStation {
+
+	public static void main(String[] args) {
+		TwoPinCharger twoPinCharger = new TwoPinCharger();
+		Charger twoPinChargerAdapter = new TwoPinChargeAdapter(twoPinCharger);
+		twoPinChargerAdapter.chargePhone();
+	}
+	
+}
